@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+known_first_party = ["birthday_service"]
+known_third_party = ["dateutil", "fastapi", "freezegun", "pydantic", "pytest"]
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+no_lines_before = "LOCALFOLDER"
+
+[tool.black]
+target-version = ["py310"]
